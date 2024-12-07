@@ -64,7 +64,7 @@ plt.ylabel('Number of movies')
 plt.xticks(rotation=45)
 plt.tight_layout()
 
-plt.show()
+# plt.show()
 
 #---------
 
@@ -81,6 +81,22 @@ plt.ylabel('Popularity')
 # plt.xticks(rotation=45)
 plt.tight_layout()
 
+# plt.show()
+
+# ---------
+
+original_language_exploded = movies_df[['title', 'release_year', 'budget', 'revenue', 'genres', 'original_language']].explode('original_language')
+original_language_count = original_language_exploded['original_language'].value_counts()
+original_language_count = original_language_count[original_language_count >= 20]
+
+# Visualization trends of original language
+
+plt.figure(figsize=(10, 6))
+sns.barplot(x=original_language_count.index, y=original_language_count.values)
+plt.title('Number of movies by original language')
+plt.xlabel('Original language')
+plt.ylabel('Number of movies')
+plt.xticks(rotation=45)
+plt.tight_layout()
+
 plt.show()
-
-
