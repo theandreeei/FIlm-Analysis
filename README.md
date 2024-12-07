@@ -54,7 +54,7 @@ The relationship between budget and profit shows that high-budget films tend to 
 1. **Clone the repository**:
 
     ```bash
-    git clone <URL-of-repository>
+    git clone https://github.com/theandreeei/FIlm-Analysis.git
     ```
 2. **Download the requirements**:  
 
